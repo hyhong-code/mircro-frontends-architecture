@@ -16,6 +16,7 @@ module.exports = {
         // products is the name property in products module ModuleFederationPlugin object
         // @url is the url for the remoteEntry file
         products: "products@http://localhost:8081/remoteEntry.js",
+        cart: "cart@http://localhost:8082/remoteEntry.js",
       },
     }),
 

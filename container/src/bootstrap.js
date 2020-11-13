@@ -1,4 +1,5 @@
 import "products/ProductsIndex";
+import "cart/CartIndex";
 // Load files from remote:
 // Upon processing by webpack, if it cannot find a module with name
 // `products` in package.json dependency, it will look into ModuleFederationPlugin
