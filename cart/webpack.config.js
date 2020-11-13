@@ -15,6 +15,8 @@ module.exports = {
       exposes: {
         "./CartIndex": "./src/index.js", // Aliasing
       },
+      shared: ["faker"], // Share faker module, so container only choose one to load
+      // Shared modules can only be loaded asynchronously
     }),
 
     new HtmlWebpackPlugin({

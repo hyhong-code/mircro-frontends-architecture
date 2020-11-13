@@ -1,12 +1,4 @@
-import faker from "faker";
-
-let products = "";
-
-// Generate a list of random product names
-for (let i = 0; i < 5; i++) {
-  const name = faker.commerce.productName();
-  products += `<div>${name}</div>`;
-}
-
-// Display product list on screen
-document.querySelector("#dev-products").innerHTML = products;
+// Give webpack the ability to load asynchronouly
+// Webpack takes a look at the file and load everything
+// it needs to run the file, then load and run it
+import("./bootstrap");

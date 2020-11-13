@@ -19,6 +19,8 @@ module.exports = {
         // Controls which module/files inside project to expose the others
         "./ProductsIndex": "./src/index", // Alias / renaming for convience
       },
+      shared: ["faker"], // Share faker module, so container don't load it if one copy of it already pre-loaded
+      // Shared modules can only be loaded asynchronously
     }),
 
     new HtmlWebpackPlugin({
