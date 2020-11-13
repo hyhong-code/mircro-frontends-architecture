@@ -17,7 +17,8 @@ module.exports = {
       filename: "remoteEntry.js", // Manifest - Contains a list of files that are available from this project
       exposes: {
         // Controls which module/files inside project to expose the others
-        "./ProductsIndex": "./src/index", // Alias / renaming for convience
+        "./ProductsIndex": "./src/bootstrap.js", // Alias / renaming for convience
+        // boostrap.js contains logics to adjust for different subapp execution context
       },
       shared: ["faker"],
       // Share faker module, so container don't load it if one copy of it already pre-loaded
