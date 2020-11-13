@@ -1,4 +1,4 @@
-// Import files from remote
+// Load files from remote
 import "products/ProductsIndex";
 
 console.log("container");

@@ -1,4 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+// Remote mode - take some code out of currently project and make available for other projects
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
 module.exports = {
@@ -12,7 +14,7 @@ module.exports = {
     // Remote: decide which modules(files) to make available to other projects
     new ModuleFederationPlugin({
       name: "products",
-      filename: "remoteEntry.js",
+      filename: "remoteEntry.js", // Manifest - Contains a list of files that are available from this project
       exposes: {
         "./ProductsIndex": "./src/index",
       },
