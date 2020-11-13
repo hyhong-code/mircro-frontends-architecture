@@ -13,7 +13,7 @@ module.exports = {
       name: "cart",
       filename: "remoteEntry.js", // Manifest file
       exposes: {
-        "./CartIndex": "./src/index.js", // Aliasing
+        "./CartIndex": "./src/bootstrap.js", // Aliasing
       },
       // shared: {
       //   faker: {

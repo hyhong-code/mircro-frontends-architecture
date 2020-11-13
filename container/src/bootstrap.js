@@ -1,5 +1,5 @@
-import { mount } from "products/ProductsIndex";
-import "cart/CartIndex";
+import { mount as mountProducts } from "products/ProductsIndex";
+import { mount as mountCart } from "cart/CartIndex";
 // Load files from remote:
 // Upon processing by webpack, if it cannot find a module with name
 // `products` in package.json dependency, it will look into ModuleFederationPlugin
@@ -11,6 +11,7 @@ import "cart/CartIndex";
 // then loads those 2 files
 // then executes bootstrap.js with those 2 files at the same time
 
-mount(document.querySelector("#my-products"));
+mountProducts(document.querySelector("#my-products"));
+mountCart(document.querySelector("#my-cart"));
 
 console.log("container");
