@@ -5,21 +5,20 @@ module.exports = {
   mode: "development",
 
   devServer: {
-    port: 8081,
+    port: 8080,
   },
 
   plugins: [
-    // Remote: decide which modules(files) to make available to other projects
+    // Host: decide which fils to get from the remotes
     new ModuleFederationPlugin({
-      name: "products",
-      filename: "remoteEntry.js",
-      exposes: {
-        "./ProductsIndex": "./src/index",
+      name: "container",
+      remotes: {
+        products: "products@http://localhost:8081/remoteEntry.js",
       },
     }),
 
     new HtmlWebpackPlugin({
-      template: "./public/index.html", // Adds script tags automatically into ./public/index.html
+      template: "./public/index.html",
     }),
   ],
 };
