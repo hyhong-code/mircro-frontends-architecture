@@ -16,7 +16,8 @@ module.exports = {
       name: "products",
       filename: "remoteEntry.js", // Manifest - Contains a list of files that are available from this project
       exposes: {
-        "./ProductsIndex": "./src/index",
+        // Controls which module/files inside project to expose the others
+        "./ProductsIndex": "./src/index", // Alias / renaming for convience
       },
     }),
 
